@@ -1,0 +1,183 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head><title> Javascript </title>
+</head>
+<body>
+    <h2 id="h1">JAVASCRIPT FUNCTIONS</h2>
+    <button onclick="displaymessage()">Click me to change the message</button>
+    <br>
+
+    <h3 id="h2">This is a for duble click mouse function</h3>
+    <button ondblclick="doubleclick()">Double click me to change the message</button>
+    <br><br>
+
+    <h3 id="h3">This is for ON mouse click function</h3>
+    <button onmousedown="downmouse()">Click me to change the message</button>
+    <br><br>
+
+    <h3 id="h4">This is for ON mouse up function</h3>
+    <button onmouseup="upmouse()">Release me to change the message</button>
+    <br><br>
+
+    <h3 id="h5">This is for mouse over function</h3>
+    <button onmouseover="overmouseclick()">Move your mouse over me to change the message</button>
+    <br><br>
+
+    <h3 id="h6" >This is for mouse out function</h3>
+    <button onmouseover="overmouse()" onmouseout="outmouse()">Move your mouse out of me</button>
+    <br><br>
+
+    <h3>This is for mouse move count function</h3>
+    <button onmousemove="count()">Move your mouse over me to count</button>
+    <p id="h7">Mouse move count: 0</p>
+    <br><br>
+
+    <h3 id="h8"> this is for right click function</h3>
+    <button oncontextmenu="rightclick()">Right click me</button>
+    <br><br>
+
+    <h3>This is for on focus move function</h3>
+    <input type="password" placeholder="Enter the password"  onfocus="focusmsg()">
+    <p id="h9"></p>
+    <br><br>
+
+    <h3>This is for on blur function</h3>
+    <input type="password" placeholder="Enter the password" onfocus="showmsg()" onblur="blurmsg()">
+    <p id="h10"></p>
+    <br><br>
+
+    <h3>This is for event listener function</h3>
+    <button id="h11">Click me to see the event listener in action</button>
+    <br><br>
+
+    <h3>This is for click function</h3>
+    <button onclick="alert('Hiiiiii!!!!!!')"> Click Me to say hi </button>
+    <br><br>
+<script>
+document.write("This is a javascript example")
+console.log("This is a console log example")   
+function displaymessage() {
+    document.getElementById("h1").innerHTML = "Message changed!";
+}
+function doubleclick() {
+    document.getElementById("h2").innerHTML = "Double click message changed!";
+}
+function downmouse() {
+    document.getElementById("h3").innerHTML = "Mouse down message changed!";
+}
+function upmouse() {
+    document.getElementById("h4").innerHTML = "Mouse up message changed!";
+}
+function overmouseclick() {
+    document.getElementById("h5").style.color = "red";
+}
+function overmouse() {
+    document.getElementById("h6").style.color = "red";
+}
+
+function outmouse() {
+    document.getElementById("h6").style.color = "blue";
+}
+let counter = 0;
+function count() {
+    counter++;
+    document.getElementById("h7").innerHTML = "Mouse move count: " + counter;
+}
+function rightclick() {
+    event.preventDefault(); // Prevent the default context menu from appearing
+    alert("Right click detected!");
+}
+
+function focusmsg() {
+    document.getElementById("h9").innerHTML = "Password must contain at least 8 characters. ";
+}
+
+function showmsg() {
+    document.getElementById("h10").innerHTML = "Password must contain at least 8 characters. ";
+}
+function blurmsg() {
+    document.getElementById("h10").innerHTML = " ";
+}
+
+let b = document.getElementById("h11");  
+b.addEventListener("click", show);  //action function name
+ function show () {
+    alert("Event listener activated!");
+}
+b.addEventListener("mouseover",colorchange);
+function colorchange() {
+    b.style.backgroundColor = "yellow";
+}
+
+b.addEventListener("mouseout",colorchange1);
+function colorchange1() {
+    b.style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>
+
+
+DOM
+How to Select elements
+getElementById
+    document.getElementById(“p1”)
+getElementsByClassName
+    document.getElementsByClassName(“para1”)
+getElementsByTagName
+    document.getElementsByTagName(“h3”)
+querySlector() - selects the first matching element
+    document.querySelector(‘#p1’)
+    document.querySelector(‘.para1’)
+querySelectorAll() - selects all the matching elements
+    document.querySelectorAll(‘#p1’)
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head><title> EventListener </title>
+</head>
+<body>
+<form>
+    Name : <input type="text" placeholder="Enter username" id="name">
+<br><br>
+Email : <input type="email" placeholder="Enter email" id="email">
+
+<br><br>
+Gender:
+<input type="radio" name="gender">Male
+<br>
+<input type="radio" name="gender">Female
+<br>
+
+<button onclick = "validate()">Submit </button>
+
+</form>
+<script>
+    function validate() {
+        let name = document.getElementById("name").value;
+
+        if(name == "")
+        {
+        document.getElementById("p1").innerHTML = "Enter the name";
+        }
+        else
+        {
+        document.getElementById("p1").innerHTML = "Name submitted";
+        }
+
+        let email=document.getElementById("email").value;
+        
+
+}
+</script>
+</body>
+</html>
+

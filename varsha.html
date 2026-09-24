@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varsha P - Technical Profile</title>
+    <!-- Added FontAwesome for Original Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      :root {
+        --blue: #1f4e9c;
+        --dark: #1a1a1a;
+        --grey: #444;
+        --line: #1f4e9c;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Calibri", sans-serif;
+        color: var(--dark);
+        background: #e9e9e9;
+        line-height: 1.25;
+      }
+
+      /* Locked exactly to A4 Dimensions */
+      .page {
+        width: 210mm;
+        height: 297mm; 
+        margin: 20px auto;
+        background: #fff;
+        padding: 10px 24px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; 
+      }
+
+      /* ---------- HEADER ---------- */
+      .top-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+      }
+      .uni-block {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .uni-text {
+        line-height: 1.2;
+      }
+      .uni-text .uni-name {
+        font-size: 11px;
+        font-weight: 700;
+        color: #1f4e9c;
+      }
+      .uni-text .uni-deg {
+        font-size: 11px;
+        color: #555;
+      }
+      .logo-cut {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        flex-shrink: 0;
+        border: 1px solid #eee;
+      }
+      .logo-cut img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .logo-right img {
+        height: 35px;
+        object-fit: contain;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 10px;
+      }
+      .id-block {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .avatar {
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #c8d4ea, #93a8d0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1f4e9c;
+        border: 3px solid #1f4e9c;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .name-wrap h1 {
+        color: var(--blue);
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .name-wrap .tag {
+        font-weight: 600;
+        color: #333;
+        font-size: 11px;
+        margin-top: 2px;
+      }
+      .name-wrap .badges {
+        margin-top: 8px;
+        font-size: 11px;
+        color: #555;
+      }
+      .name-wrap .badges .badges-label {
+        font-weight: 700;
+        color: #1f2d3d;
+        font-size: 11px;
+        display: block;
+        margin-bottom: 6px;
+      }
+      
+      .name-wrap .badges .badge-logos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+      }
+      .name-wrap .badges .badge-logos img {
+        height: 22px;
+        width: 75px; 
+        object-fit: contain;
+        object-position: left; 
+      }
+
+      .contact-card {
+        border: 1.5px solid #1f4e9c;
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 11px;
+        min-width: 250px;
+        background: #f8faff;
+      }
+      .contact-card div {
+        margin: 4px 0;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: #333;
+        font-weight: 500;
+      }
+      .contact-card .ico {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #1f4e9c;
+        color: #fff;
+        font-size: 11px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .contact-card a {
+        color: #333;
+        text-decoration: none;
+      }
+      .contact-card a:hover {
+        text-decoration: underline;
+        color: #1f4e9c;
+      }
+
+      /* ---------- SUMMARY ---------- */
+      .summary {
+        font-size: 11px;
+        text-align: justify;
+        color: #333;
+        margin-bottom: 8px;
+        line-height: 1.4;
+        padding: 8px 12px;
+        background: #f4f6fa;
+        border-left: 3px solid #1f4e9c;
+        border-radius: 0 4px 4px 0;
+      }
+
+      /* ---------- COLUMNS ---------- */
+      .columns {
+        display: flex;
+        gap: 20px;
+        flex: 1;
+      }
+      .col-left {
+        width: 45%;
+      }
+      .col-right {
+        width: 55%;
+      }
+
+      .section-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--dark);
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 2px;
+        margin: 8px 0 6px;
+        text-transform: uppercase;
+      }
+      .sub-title {
+        color: var(--blue);
+        font-weight: 700;
+        font-size: 11px;
+        margin: 6px 0 2px;
+      }
+
+      /* SKILLS SIDE BY SIDE */
+      .skill-row { display: flex; font-size: 10.5px; margin: 4px 0; line-height: 1.3; }
+      .skill-cat { font-weight: bold; color: #1f4e9c; width: 120px; flex-shrink: 0; }
+      .skill-val { color: #333; }
+
+      /* Academic timeline */
+      .timeline {
+        position: relative;
+        margin-left: 6px;
+        padding-left: 16px;
+        margin-bottom: 8px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: #1f4e9c;
+      }
+      .tl-item {
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .tl-item:last-child {
+        margin-bottom: 0;
+      }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -17px;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #1f4e9c;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .tl-head {
+        font-weight: 700;
+        font-size: 11px;
+        color: #222;
+      }
+      .tl-head .yr {
+        color: #1f4e9c;
+        font-size: 11px;
+        font-weight: 700;
+        display: block;
+        margin-top: 1px;
+      }
+      .tl-head .gpa {
+        float: right;
+        color: #1f4e9c;
+        font-weight: 700;
+        font-size: 11px;
+      }
+      .tl-sub {
+        font-size: 11px;
+        color: #555;
+        margin-top: 2px;
+      }
+
+      ul.dash {
+        list-style: none;
+      }
+      ul.dash li {
+        font-size: 11px;
+        margin: 3px 0;
+        padding-left: 14px;
+        position: relative;
+        color: #333;
+        line-height: 1.35;
+      }
+      ul.dash li::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: #1f4e9c;
+        font-weight: 700;
+      }
+
+      /* Projects & Experience */
+      .project {
+        margin-bottom: 12px;
+      }
+      .project h3 {
+        font-size: 11px;
+        color: var(--dark);
+        margin-bottom: 3px;
+        line-height: 1.25;
+        font-weight: 700;
+      }
+      .project ul {
+        list-style: none;
+      }
+      .project ul li {
+        font-size: 11px;
+        margin: 3px 0;
+        padding-left: 14px;
+        position: relative;
+        color: #444;
+        line-height: 1.35;
+      }
+      .project ul li::before {
+        content: "•";
+        position: absolute;
+        left: 4px;
+        color: #1f4e9c;
+        font-size: 14px;
+        line-height: 1;
+      }
+
+      /* Print settings enforcing A4 */
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+        body {
+          margin: 0;
+          background: #fff;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+          width: 210mm;
+          height: 297mm;
+          page-break-after: avoid;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Top banner -->
+      <div class="top-banner">
+        <div class="uni-block">
+          <div class="logo-cut sdnb">
+            <img src="https://www.sdnbvc.com/index_files/logo.png" alt="SDNB Vaishnav College" onerror="this.src='https://via.placeholder.com/50?text=SDNB'" />
+          </div>
+          <div class="uni-text">
+            <div class="uni-name">Shrimathi Devkunvar Nanalal Bhatt Vaishnav College</div>
+            <div class="uni-deg">
+              BSc Computer Science (Artificial Intelligence)
+            </div>
+          </div>
+        </div>
+        <div class="logo-right">
+          <img src="Face" alt="FACE Prep Campus" onerror="this.style.display='none'" />
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="id-block">
+          <div class="avatar">
+            <img src="varsha.jpeg" alt="Varsha P" onerror="this.src='https://via.placeholder.com/120?text=Photo'" />
+          </div>
+          <div class="name-wrap">
+            <h1>VARSHA P</h1>
+            <div class="tag">STUDENT BSC CSC (AI) 2 YEAR</div>
+            <div class="badges">
+              <span class="badges-label">Certification Badges</span>
+              <div class="badge-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" title="Google">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" title="IBM">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" title="AWS">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div><span class="ico"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:varshaprasadh0405@gmail.com">varshaprasadh0405@gmail.com</a></div>
+          <div><span class="ico"><i class="fa-solid fa-phone"></i></span> +91 8925936483</div>
+          <div><span class="ico"><i class="fa-brands fa-linkedin-in"></i></span> <a href="https://linkedin.com/in/varsha-p-b838b3315" target="_blank">linkedin.com/in/varsha-p-b838b3315</a></div>
+          <div><span class="ico"><i class="fa-brands fa-github"></i></span> <a href="https://github.com/VarshaP-0405" target="_blank">github.com/VarshaP-0405</a></div>
+          <div><span class="ico"><i class="fa-solid fa-location-dot"></i></span> 8B 38th Street, Nanganallur, Chennai-600061</div>
+        </div>
+      </div>
+
+      <!-- Professional summary -->
+      <div class="summary">
+        <strong>CAREER OBJECTIVE:</strong> Dynamic professional specializing in the development of practical solutions through AI and data-driven technologies, with a proven track record of creating impactful real-world applications that prioritize usability. A proactive problem-solver adept at transforming innovative ideas into functional systems, demonstrating exceptional time management and adaptability. Recognized for reliability and a swift capacity to learn new skills, committed to driving team success and fostering organizational growth. Eager to embrace new challenges and contribute meaningfully from day one, leveraging strong communication skills to achieve positive outcomes.[cite: 1]
+      </div>
+
+      <!-- Two columns -->
+      <div class="columns">
+        <!-- LEFT -->
+        <div class="col-left">
+          <div class="section-title">ACADEMICS</div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-head">
+                BS in Data Science & Applications
+                <span class="yr">2024 – 2028</span>
+              </div>
+              <div class="tl-sub">
+                Indian Institute of Technology Madras[cite: 1]
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-head">
+                Bachelor of Computer Science (AI)
+                <span class="gpa">CGPA: 7.3</span>
+                <span class="yr">2024 – 2027</span>
+              </div>
+              <div class="tl-sub">
+                Shrimathi Devkunvar Nanalal Bhatt Vaishnav College for Women[cite: 1]
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-head">
+                Higher Secondary Class
+                <span class="gpa">GPA: 87%</span>
+                <span class="yr">2022 – 2024</span>
+              </div>
+              <div class="tl-sub">New Prince Shri Bhavani Vidyashram CBSE School[cite: 1]</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-head">
+                Secondary Class
+                <span class="gpa">Grade: 9</span>
+                <span class="yr">2016 – 2022</span>
+              </div>
+              <div class="tl-sub">
+                Sri Sankara Global Academy, Keelkattalai[cite: 1]
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">TECHNICAL SKILLS</div>
+          <div class="skill-row">
+            <div class="skill-cat">Programming:</div>
+            <div class="skill-val">Python, Flask[cite: 1]</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-cat">Web Development:</div>
+            <div class="skill-val">HTML, CSS, Bootstrap, JavaScript[cite: 1]</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-cat">Databases:</div>
+            <div class="skill-val">SQLite[cite: 1]</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-cat">Tools & Analytics:</div>
+            <div class="skill-val">Power BI, Data Analysis[cite: 1]</div>
+          </div>
+
+          <div class="section-title">SOFT SKILLS</div>
+          <ul class="dash">
+            <li>Teamwork and collaboration[cite: 1]</li>
+            <li>Friendly, positive attitude[cite: 1]</li>
+            <li>Time management[cite: 1]</li>
+            <li>Verbal communication[cite: 1]</li>
+            <li>Excellent communication[cite: 1]</li>
+          </ul>
+
+          <div class="section-title">CERTIFICATIONS</div>
+          <ul class="dash">
+            <li>Microsoft Applied Skills (12 Certifications)[cite: 1]</li>
+            <li>NSDC Skill India Software Engineering[cite: 1]</li>
+            <li>NSDC Skill India - Power BI Visualization[cite: 1]</li>
+            <li>EF SET English Certificate C2 Proficiency[cite: 1]</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-right">
+          <div class="section-title">EXPERIENCE</div>
+          
+          <div class="project">
+            <h3>
+              Power BI Intern | Cognifyz Technologies
+            </h3>
+            <ul>
+              <li>Created interactive Power BI dashboards and reports for data analysis.[cite: 1]</li>
+              <li>Performed data cleaning, transformation, and visualization to generate actionable insights.[cite: 1]</li>
+            </ul>
+          </div>
+          
+          <div class="section-title">PROJECT SHOWCASE</div>
+
+          <div class="project">
+            <h3>1. Personal Safety & Medical App</h3>
+            <ul>
+              <li>Built features for emergency alerts and health tracking.[cite: 1]</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>2. DBMS (Dynamic Bedside Monitoring System)</h3>
+            <ul>
+              <li>An IoT project used for monitoring patients.[cite: 1]</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>3. Hospital Management System</h3>
+            <ul>
+              <li>Developed a full-stack web application using Flask, SQLite, and Bootstrap to manage patients, doctors, appointments, and treatments with role-based access.[cite: 1]</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>4. Iris Pupil Diameter Analytics & Anomaly Prediction</h3>
+            <ul>
+              <li>Developed a machine learning model to analyse iris pupil data and detect anomalies, enabling data-driven insights and predictive analysis.[cite: 1]</li>
+            </ul>
+          </div>
+
+          <div class="section-title">ACHIEVEMENTS & HACKATHONS</div>
+          <ul class="dash">
+            <li>Secured 2nd Prize in Paper Presentation at Dhanapalan College.[cite: 1]</li>
+            <li>Attended Inter College Technical Competitions in Sairam, Don Bosco, Aadhi, Dhanapalan, etc.[cite: 1]</li>
+            <li>Won 3rd Place in CM Trophy Table Tennis, 2nd Place in A-Zone District Level for University Of Madras, demonstrating discipline and competitive spirit.[cite: 1]</li>
+            <li>Have attended workshops on PowerBI, App development, etc.[cite: 1]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

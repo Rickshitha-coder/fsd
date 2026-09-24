@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: green;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: yellow;
+}
+
+span {
+    font-family: "Times New Roman", serif;
+    color: red;
+    font-size: 12px;
+}
+
+.login-container {
+    width: 200px;      /* or use 20% / 100% as needed */
+    padding: 20px;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 100px auto;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Shopping Cart</title>
+    <style>
+        body{
+            font-family:Arial;
+            background:#f2f2f2;
+            text-align:center;
+            padding:20px;
+        }
+        .box{
+            width:500px;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+        }
+        button{
+            padding:8px 15px;
+            margin:5px;
+            background:blue;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        #output{
+            margin-top:20px;
+            background:#eee;
+            padding:15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>🛒 Shopping Cart</h2>
+
+<button onclick="showProducts()">Show Products</button>
+<button onclick="searchProduct()">Search</button>
+<button onclick="applyDiscount()">Discount</button>
+<button onclick="showTotal()">Total Bill</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+let products=[
+{name:"Laptop",price:50000},
+{name:"Mouse",price:500},
+{name:"Keyboard",price:1500},
+{name:"Phone",price:30000}
+];
+
+// Show Products
+function showProducts(){
+
+let text="<h3>Products</h3>";
+
+products.forEach(function(item){
+
+text+=item.name+" - ₹"+item.price+"<br>";
+
+});
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+// Filter + String
+function searchProduct(){
+
+let name=prompt("Enter Product Name");
+
+let result=products.filter(function(item){
+
+return item.name.toLowerCase().includes(name.toLowerCase());
+
+});
+
+let text="<h3>Search Result</h3>";
+
+result.forEach(function(item){
+
+text+=item.name+" - ₹"+item.price+"<br>";
+
+});
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+// Map + Math
+function applyDiscount(){
+
+let discount=products.map(function(item){
+
+return{
+name:item.name,
+price:Math.round(item.price*0.9)
+};
+
+});
+
+let text="<h3>10% Discount</h3>";
+
+discount.forEach(function(item){
+
+text+=item.name+" - ₹"+item.price+"<br>";
+
+});
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+// Reduce + Date
+function showTotal(){
+
+let total=products.reduce(function(sum,item){
+
+return sum+item.price;
+
+},0);
+
+let today=new Date();
+
+document.getElementById("output").innerHTML=
+
+"<h3>Bill</h3>"+
+
+"Total = ₹"+total+
+
+"<br><br>Date : "+today.toLocaleDateString()+
+
+"<br>Time : "+today.toLocaleTimeString();
+
+}
+
+</script>
+
+</body>
+</html>
